@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: ml-app
-        image: your-dockerhub-username/ml-app:latest
+        image: dimondmelov03/ml-app:latest
         ports:
         - containerPort: 8080
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         resources:
           requests:
             memory: "128Mi"
