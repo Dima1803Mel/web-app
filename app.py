@@ -8,7 +8,8 @@ app = Flask(__name__)
 def hello():
     return jsonify({
         'version': os.environ.get('APP_VERSION', 'unknown'),
-        'host': socket.gethostname()
+        'host': socket.gethostname(),
+        'message': 'Updated via CI/CD!' # Новое поле
     })
 
 @app.route('/health')
